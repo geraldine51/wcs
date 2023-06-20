@@ -20,73 +20,42 @@
 }
 
 :root {
-  --primary-color: #3e3d46;
-  --secondary-color: #efeef5;
-  --h1: #494764;
-  --h2: #231f3d;
-  --light: #f6f5f8;
-  --dark: #1d1c2e;
+  --primary-color: #8e3f46;
+  --secondary-color: #faedee;
+  --h1: #61362f;
+  --light: #fce7e9;
+  --dark: #240709;
 }
 
-li {
-  list-style-type: none;
-}
+/* navigation */ 
 
 nav {
   background-color: var(--primary-color);
   background-size: 100%;
-  margin: 5px;
-  padding: 50px;
+  border: 10px var(--primary-color) solid;
+  margin: 10px;
+  padding: 10px;
 }
 
 nav a {
-  'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
   color: var(--light);
   text-align: center;
   text-decoration: none;
-}
-
-
-.sous {
-  display: none;
-  box-shadow: 0px 1px 2px var(--dark);
-  background-color: var(--secondary-color);
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
-}
-
-nav ul li {
-  float: left;
-  width: 15%;
-  text-align: center;
-   position: relative;
-}
-
-nav > ul li:hover .sous {
-  display: block;
-}
-
-.sous li {
-  float: none;
-  width: 100%;
-  text-align: left;
-}
-
-.sous a {
+  border: 10px var(--primary-color) solid;
+  margin: 10px;
   padding: 10px;
-  border-bottom: none;
 }
 
-.sous a:hover {
-  border-bottom: none;
-  background-color: var(--primary-color);
-}
 
-.deroulant>a::after {
-  content: "▼";
-  font-size: 12px;
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark);
+  text-align: center;
+  border: 10px var(--secondary-color) solid;
+  margin: 10px;
+  padding: 10px;
 }
 
 main {
@@ -98,21 +67,106 @@ h1 {
   text-align: center;
   font-size: 40px;
   color: var(--h1);
+  text-shadow: 5px 1px 5px 1px var(--light);
 }
 
 h2 {
-  'Playfair Display', serif;
-  text-align: center;
-  font-size: 30px;
-  color: var(--h2);
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+  font-size: 25px;
+  color: var(--h1);
+  margin: 20px;
+  padding: 10px;
 }
+
+/* element texte presentation du blog */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.elements {
+  align-items: flex-start;
+  margin: 10px;
+}
+
+/* element texte presentation Geri */
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.elements2 {
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+/* image des articles */
+
+.bloc {
+  display: flex;
+  width: 90%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.image {
+  width: 900px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* texte des articles  */
+
+.textarticle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* paragraphe */
 
 p {
   color: var(--dark);
   font-size: 16px;
-  text-align: justify;
+  text-align: left;
   font-family: 'Comme', sans-serif;
   margin: 10px;
+  padding: 10px;
+}
+
+/* commentaires des articles */
+
+#sectionhead {
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+  font-size: 14px;
+  color: var(--h1);
+  margin: 20px;
+  padding: 10px;
+}
+
+#comment-content {
+  width: 80%;
+  height: auto;
+  border: 1px var(--dark) solid;
+  border-radius: 20px;
+  color: var(--dark);
+  font-size: 13px;
+  text-align: left;
+  font-family: 'Comme', sans-serif;
+  margin: 0px 150px 0px 150px;
   padding: 10px;
 }
 
